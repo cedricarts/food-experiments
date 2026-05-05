@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
@@ -9,33 +9,59 @@
 </head>
 
 <body>
-  <main>
-    <header>
-      <h1>Experiment Recipes</h1>
-      <p>Welcome to my collection of experimental recipes! Here, I share my culinary adventures and the unique dishes
-        I've created. Whether you're a seasoned chef or just looking for some kitchen inspiration, you'll find something
-        exciting to try. Each recipe is a blend of creativity and flavor, designed to delight your taste buds and spark
-        your imagination in the kitchen. Dive in and explore the delicious possibilities!</p>
-    </header>
-    <br>
-    <hr>
-    <div class="recipe-list">
-      <a href="recipes/tortilla-recipe.html">
-        <div class="recipe-card">
-          <h2>Tortilla Recipe</h2>
-          <p>A proper tortilla recipe, simply because I love cooking as much as I love programming and making things!!
-          </p>
-        </div>
-      </a>
-
-      <div class="recipe-card">
-        <h2><a href="recipes/balanced-meal.html">Rice With Eggs + Avo Slices (Experimental Recipe)</a></h2>
-        <p></p>
+  <main class="bento-layout">
+    <header class="panel panel-hero">
+      <div>
+        <p class="eyebrow">Cedric Arts · Kitchen Lab</p>
+        <h1>Experiment Recipes</h1>
       </div>
-      <!-- More recipe cards can be added here -->
-    </div>
 
+      <button class="theme-switch" id="themeToggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
+        <span class="switch-track">
+          <span class="switch-thumb" aria-hidden="true"></span>
+        </span>
+      </button>
+
+      <p>Welcome to my collection of experimental recipes. Each dish blends simplicity with creative flavor and is
+        built to be practical, fun, and surprisingly satisfying.</p>
+    </header>
+
+    <section class="panel panel-search">
+      <h2>Find a Recipe</h2>
+      <label for="recipeSearch" class="sr-only">Search recipes</label>
+      <input id="recipeSearch" type="search" placeholder="Search by recipe name, ingredient, or tag..." autocomplete="off">
+      <p class="search-hint">Try: tortilla, eggs, avocado, quick, comfort.</p>
+    </section>
+
+    <section class="panel panel-feature recipe-card" data-search="tortilla proper recipe cooking programming" data-tags="comfort,classic,quick" aria-label="Open Tortilla Recipe">
+      <h2>Featured Right Now</h2>
+      <a href="recipes/tortilla-recipe.html">
+        <h3>Tortilla Recipe</h3>
+        <p>A proper tortilla recipe, simply because I love cooking as much as I love programming and making things.</p>
+      </a>
+      <div class="tags">
+        <span class="tag">Comfort</span>
+        <span class="tag">Classic</span>
+        <span class="tag">Quick</span>
+      </div>
+    </section>
+
+    <section class="panel panel-list recipe-card" data-search="rice eggs avocado balanced healthy fats protein" data-tags="balanced,high-protein,easy" aria-label="Open Rice With Eggs and Avocado recipe">
+      <h2>Experimental Meals</h2>
+      <a href="recipes/balanced-meal.html">
+        <h3>Rice With Eggs + Avo Slices</h3>
+        <p>A quick and balanced meal idea with protein, healthy fats, and comfort.</p>
+      </a>
+      <div class="tags">
+        <span class="tag">Balanced</span>
+        <span class="tag">High Protein</span>
+        <span class="tag">Easy</span>
+      </div>
+    </section>
   </main>
+
+  <script src="js/theme-toggle.js" defer></script>
+  <script src="js/search.js" defer></script>
 </body>
 
 </html>
