@@ -15,30 +15,53 @@
         <p class="eyebrow">Cedric Arts · Kitchen Lab</p>
         <h1>Experiment Recipes</h1>
       </div>
-      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">🌙</button>
+
+      <button class="theme-switch" id="themeToggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
+        <span class="switch-track">
+          <span class="switch-thumb" aria-hidden="true"></span>
+        </span>
+      </button>
+
       <p>Welcome to my collection of experimental recipes. Each dish blends simplicity with creative flavor and is
         built to be practical, fun, and surprisingly satisfying.</p>
     </header>
 
-    <section class="panel panel-feature">
+    <section class="panel panel-search">
+      <h2>Find a Recipe</h2>
+      <label for="recipeSearch" class="sr-only">Search recipes</label>
+      <input id="recipeSearch" type="search" placeholder="Search by recipe name, ingredient, or tag..." autocomplete="off">
+      <p class="search-hint">Try: tortilla, eggs, avocado, quick, comfort.</p>
+    </section>
+
+    <section class="panel panel-feature recipe-card" data-search="tortilla proper recipe cooking programming" data-tags="comfort,classic,quick" aria-label="Open Tortilla Recipe">
       <h2>Featured Right Now</h2>
-      <a href="recipes/tortilla-recipe.html" class="recipe-card" aria-label="Open Tortilla Recipe">
+      <a href="recipes/tortilla-recipe.html">
         <h3>Tortilla Recipe</h3>
         <p>A proper tortilla recipe, simply because I love cooking as much as I love programming and making things.</p>
       </a>
+      <div class="tags">
+        <span class="tag">Comfort</span>
+        <span class="tag">Classic</span>
+        <span class="tag">Quick</span>
+      </div>
     </section>
 
-    <section class="panel panel-list">
+    <section class="panel panel-list recipe-card" data-search="rice eggs avocado balanced healthy fats protein" data-tags="balanced,high-protein,easy" aria-label="Open Rice With Eggs and Avocado recipe">
       <h2>Experimental Meals</h2>
-      <a class="recipe-card" href="recipes/balanced-meal.html">
+      <a href="recipes/balanced-meal.html">
         <h3>Rice With Eggs + Avo Slices</h3>
         <p>A quick and balanced meal idea with protein, healthy fats, and comfort.</p>
       </a>
+      <div class="tags">
+        <span class="tag">Balanced</span>
+        <span class="tag">High Protein</span>
+        <span class="tag">Easy</span>
+      </div>
     </section>
   </main>
 
-  <script src="js/theme-toggle.js">
-  </script>
+  <script src="js/theme-toggle.js" defer></script>
+  <script src="js/search.js" defer></script>
 </body>
 
 </html>
