@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #fafafa;
+    color: #111;
+    line-height: 1.6;
+    margin: 10px;
+    padding: 15px;
+}
+
+.recipe-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.recipe-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
